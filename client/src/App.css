@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webki-font-smoothing: antialiased;
+  background-color: #001e1f;
+  background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  overflow-wrap: break-word;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container_btns {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.title {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 3rem;
+}
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  font-size: 1.6rem;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.21);
+  }
+}
+
+.todo__status {
+  font-size: 1.75rem;
+}
+
+.todo__delete {
+  font-size: 1.75rem;
+}
+
+.todo__status,
+.todo__delete {
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  color: #fff;
+  &:hover {
+    transform: scale(1.3);
+  }
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+
+.form_input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.form_btn {
+  border: none;
+  background-color: #024a4e86;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+  padding: 1rem;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: #013e4186;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .todo {
+    width: 90%;
+    font-size: 1.2rem;
+  }
+}
